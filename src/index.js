@@ -4,22 +4,35 @@ import './index.css';
 import Card from './Card';
 import data from './data'
 import Nav from './Nav'
-function card(val){
-  return(
-     
-    <Card  imgsrc={val.imgsrc}
-    title={val.title}
-    name={val.name}
-    links={val.links}/>
+// with function
+// function card(val){
+//   return(
+//     //  in val there is data  of array 
+//     <Card  imgsrc={val.imgsrc}
+//     title={val.title}
+//     name={val.name}
+//     links={val.links}/>
     
-  )}
+//   )}
 
 ReactDOM.render(
   <React.StrictMode>
     <Nav>
       </Nav>
+{/* for maping the array data */}
+{/* with function */}
+ {/* {data.map(function card(val){ */}
+ {/* with fat arrow function */}
+ {data.map( (val)=>{
 
- {data.map(card)};
+   return  (<Card  imgsrc={val.imgsrc}
+      title={val.title}
+       name={val.name}
+       links={val.links}/>
+       
+     );
+    })}
+
 
     
   </React.StrictMode>,
